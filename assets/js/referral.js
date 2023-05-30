@@ -18,5 +18,5 @@ $(window).on('load', function () {
 function generateReferral() {
     let email = $("#referralEmail").val();
     document.getElementById("generatedReferral").style.display = "block";
-    document.getElementById("generatedReferral").innerHTML = `https://zebraprep.com?referral=${email}`;
+    document.getElementById("generatedReferral").innerHTML = `https://www.zebraprep.com?referral=${email}`;
 }
