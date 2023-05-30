@@ -1,1 +1,188 @@
-Test
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Zebra Prep</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta property="og:url" content="https://prep.roydero.com">
+    <meta property="og:title" content="Zebra Prep">
+
+    <link rel="icon" href="assets/images/favicon.webp" id="light-scheme-icon">
+    <link rel="icon" href="assets/images/favicon.webp" id="dark-scheme-icon">
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="assets/css/styles.css"></link>
+    <link rel="stylesheet" href="modules/bootstrap.min.css">
+
+    <script src="modules/jquery.min.js"></script>
+    <script src="modules/bootstrap.min.js"></script>
+    <script src="modules/jquery-canvas-sparkles.js"></script>
+    <script src="modules/jquery-canvas-sparkles.min.js"></script>
+    <script src="modules/aos.js"></script>
+    <script src='modules/font-awesome.js'></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/main.js"></script>
+  </head>
+  <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
+    <div class="container-fluid">
+        <a class="navbar-brand"  href="/">
+        <img  src="assets/images/favicon.webp" alt="" width="50" height="50" class="d-inline-block align-text-top">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#ham" aria-controls="ham" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="ham">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link " aria-current="page" href="../referral.html">Referral </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../dashboard.html">Dashboard</a>
+                </li>
+            </ul>
+            <a target="_blank" href="mailto:royceaden@gmail.com"><i class="fas fa-envelope contact-icons"></i></a>
+            <a id="navbar-login"> Login  </a>
+        </div>
+    </div>
+  </nav>
+
+  <div class="modal fade" id="setModal" tabindex="-1" aria-labelledby="modal-title" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modal-title"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div id="modal-body" class="modal-body"></div>
+      </div>
+    </div>
+  </div>
+
+  <body>
+    <header class="main">
+      <header style="background-color: #040606!important;" class="py-5">
+          <div class="container px-5">
+              <div class="row gx-5 align-items-center justify-content-center">
+                  <div class="col-lg-8 col-xl-7 col-xxl-6">
+                      <div class="my-5 text-center text-white text-xl-start">
+                          <h1 class="display-5 fw-bolder mb-2 intro-text-small">Since 2023<br><span class="intro-text-big" style="color: white;">Zebra Prep</span></h1>
+                          <p class="intro-text-ss lead fw-normal mb-4">Live classes covering class syllabus, assigned and graded homework, and class resources to achieve success. </p>
+                          <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
+                              <a class="btn  btn-lg px-4 me-sm-3" style="background-color:lightgrey " href="#learn-more">Learn More</a>
+                              <a class="btn btn-outline-light btn-lg px-4" href="../dashboard.html">Dashboard</a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-3 my-5" src="assets/images/zebra.png" alt="..." /></div>
+              </div>
+          </div>
+      </header>
+  </header>
+    <div class="body-content">
+      <div id="learn-more"></div>
+      <div style="background-color:lightgrey; color: black; width: 100%;padding: 10px; text-align: center;">🎯 FREE TRIAL CLASS - FRIDAY, JUNE 2ND AT 5 PM - USE THIS LINK TO JOIN - https://meet.google.com/bnu-fgct-osd 🎯</div>
+      <div id="sections"  class="container" style="padding-top: 50px; ">
+       
+        <!-- Sections Available -->
+        <div class="row" style="display: flex; justify-content: center; align-items: center;">
+          <h3 class="display-4 lh-1 mb-3" style="font-family: Luckiest Guy, cursive; color: black; font-size: 40px;">Sections Available</h3>
+          <div class="card" style="width: 18rem; background-color:#e8fbe8;padding: 0px; margin: 10px 20px" >
+            <img class="card-img-top" src="assets/images/math.jpg" >
+            <div class="card-body">
+              <h5 class="card-title">SAT Math (Section 1)</h5>
+              <p class="card-text">
+                <b>Term:</b> Summer <br>
+                <b>Schedule:</b> Twice a week (Monday and Thursday at 5 PM) <br>
+                <b>Registration:</b> Open <br>
+                <b>Class Size:</b> 2/20 <br>
+                <b>Cost:</b> $10/class/hr
+              </p>
+              <a id="section-1-info" class="btn" style="background-color: lightskyblue;">More Info</a>
+              <a id="section-1-registration" class="btn" style="background-color: lightgreen;">Register</a>
+            </div>
+          </div>
+
+          <div class="card" style="width: 18rem; background-color:#e8fbe8;padding: 0px; margin: 10px 20px">
+            <img class="card-img-top" src="assets/images/math.jpg" >
+            <div class="card-body">
+              <h5 class="card-title">SAT Math (Section 2)</h5>
+              <p class="card-text">
+                <b>Term:</b> Summer <br>
+                <b>Schedule:</b> Twice a week (Tuesday and Friday at 5 PM) <br>
+                <b>Registration:</b> Open <br>
+                <b>Class Size:</b> 4/20 <br>
+                <b>Cost:</b> $10/class/hr
+              </p>
+              <a id="section-2-info" class="btn" style="background-color: lightskyblue;">More Info</a>
+              <a id="section-2-registration" class="btn" style="background-color: lightgreen;">Register</a>
+            </div>
+          </div>
+
+          <div class="card" style="width: 18rem; background-color: #FFF2F2;padding: 0px; margin: 10px 20px">
+            <img class="card-img-top" src="assets/images/math.jpg" >
+            <div class="card-body">
+              <h5 class="card-title">SAT Math (Section 3)</h5>
+              <p class="card-text">
+                <b>Term:</b> Summer <br>
+                <b>Schedule:</b> Twice a week (Saturday and Sunday at 5 PM) <br>
+                <b>Registration:</b> Closed <br>
+                <b>Class Size:</b> 20/20 <br>
+                <b>Cost:</b> $10/class/hr
+              </p>
+              <a id="section-3-info" class="btn" style="background-color: lightskyblue;">More Info</a>
+              <a id="section-3-registration" class="btn" style="background-color: tomato;">Closed</a>
+            </div>
+          </div>
+        </div>
+
+        <!--Class Structure-->
+        <div class="row" style="padding-top: 30px;"">
+          <h3 class="display-4 lh-1 mb-3" style="font-family: Luckiest Guy, cursive; color: black; font-size: 40px;">Class Structure</h3>
+          <div class="lead col">
+            <ul>
+              <li> 1 Hour Classes on Google Meets</li>
+              <li> First 15 minutes spent on review of homework packets. Next 30 minutes spent on teaching and lesson plan for the day. Last 15 minutes of class spent on review problems over the day's lesson plan.</li>
+              <li> All registered students have access to the Dashboard Class Page that contains the bi-weekly Google Meets meeting link, class resources, homework packets, homework submission page, homework feedback page, and other free resources (multiple textbooks, past practice exams, etc).</li>
+            </ul>
+          </div>
+        </div>
+
+
+        <!-- About Me/Qualifications Section-->
+        <div class="row" style="padding-top: 30px;"">
+          <h3 class="display-4 lh-1 mb-3" style="font-family: Luckiest Guy, cursive; color: black; font-size: 40px;">About Me</h3>
+          <div class="lead col">My name is Royce Arockiasamy and I'm attending Georgia Tech in the fall with an plan on double majoring in Computer Science and Mathematics. Listed below are a few of my tutoring qualifications:</div>
+          <ul style="padding: 0 50px" class="lead">
+            <li>Valedictorian of South Forsyth High School </li>
+            <li> Scored a Perfect 800 on the Math section on the both times I took the SAT. Scored a perfect 760 on the PSAT Math Section. </li>
+            <li> Completed Georgia Tech Math Year 2 (Took courses in Linear Algebra, Multivariable Calculus, Applied Combinatorics and Differential Equations) </li>
+            <li> Governors Honors Program Finalist in Chemistry</li>
+            <li> Won Outstanding Team Award at SCUDEM (SIMIODE Challenge Using Differential Equations Modeling) and presented at an International Math Conference</li>
+            <li> First Place at TSA National Leadership Conference </li>
+            <li> Played Varsity Tennis and took classes for 6 students over the course of a year</li>
+            <li> Co-Captain of Science Olympiad and Officer in National Beta and National Honor Society (NHS)</li>
+            <li> National Beta Scholarship Recipient</li>
+            <li> Tutored in Mu Alpha Theta (Math Honor Society) and Science National Honor Society </li>
+          </ul>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="row" style="padding-top: 30px;"">
+          <h3 class="display-4 lh-1 mb-3" style="font-family: Luckiest Guy, cursive; color: black; font-size: 40px;">Have questions?</h3>
+          <div class="lead col">Feel free to contact me through any of the options below. I will respond within a day. </div>
+          <ul style="padding: 0 50px" class="lead">
+            <li>Message/Call: 470-354-6722 </li>
+            <li>Email: royceaden@gmail.com</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

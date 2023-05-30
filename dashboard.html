@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Student Dashboard</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta property="og:url" content="https://prep.roydero.com">
+    <meta property="og:title" content="Student Dashboard">
+
+    <link rel="icon" href="assets/images/favicon.webp" id="light-scheme-icon">
+    <link rel="icon" href="assets/images/favicon.webp" id="dark-scheme-icon">
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="assets/css/styles.css"></link>
+    <link rel="stylesheet" href="modules/bootstrap.min.css">
+
+    <script src="modules/jquery.min.js"></script>
+    <script src="modules/bootstrap.min.js"></script>
+    <script src="modules/jquery-canvas-sparkles.js"></script>
+    <script src="modules/jquery-canvas-sparkles.min.js"></script>
+    <script src="modules/aos.js"></script>
+    <script src='modules/font-awesome.js'></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/dashboard.js"></script>
+  </head>
+  <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
+    <div class="container-fluid">
+        <a class="navbar-brand"  href="/">
+        <img  src="assets/images/favicon.webp" alt="" width="50" height="50" class="d-inline-block align-text-top">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#ham" aria-controls="ham" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="ham">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link " aria-current="page" href="../referral.html">Referral </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="../dashboard.html">Dashboard</a>
+                </li>
+            </ul>
+            <a target="_blank" href="mailto:royceaden@gmail.com"><i class="fas fa-envelope contact-icons"></i></a>
+            <a id="navbar-login"> Log Out </a>
+        </div>
+    </div>
+  </nav>
+
+  <div class="modal fade" id="setModal" tabindex="-1" aria-labelledby="modal-title" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modal-title"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div id="modal-body" class="modal-body"></div>
+      </div>
+    </div>
+  </div>
+
+  <body>
+    <div class="body-content">
+      
+      <div class="container" style="padding-top: 100px; ">
+        <h3 class="display-4 lh-1 mb-3" style="font-family: Luckiest Guy, cursive; color: black; font-size: 60px;text-align: center;">Dashboard</h3>
+        <div style="background-color:lightgrey; color: black; width: 100%;padding: 10px; text-align: center;">🎯 FREE TRIAL CLASS - FRIDAY, JUNE 2ND AT 5 PM - USE THIS LINK TO JOIN - https://meet.google.com/bnu-fgct-osd 🎯</div>
+        <br>
+        <div class="row" style="display: flex; justify-content: center; align-items: center;">
+            <h3 class="display-4 lh-1 mb-3" style="font-family: Luckiest Guy, cursive; color: black; font-size: 35px;">Registered Classes</h3>
+            <div class="card" style="width:90%; background-color:#e8fbe8;padding: 0px; margin: 10px 20px" >
+              <div class="card-body">
+                <h5 class="card-title" id="class-title"></h5>
+                <p class="card-text" id="class-body"> </p>
+                <a id="payment"></a>
+                <a id="class-page" class="btn" style="background-color: lightblue;">Class Page</a>
+              </div>
+            </div> 
+      </div>
+    </div>
+  </body>
+</html>
