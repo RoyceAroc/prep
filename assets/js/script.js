@@ -43,7 +43,7 @@ const db = firebase.firestore();
 
 const paymentInfo = 
 `
-Billed monthly (June and July) with 8 classes per month. Payments are completed online through the dashboard. Multiple payment options available: Stripe (Automated), PayPal, and Venmo. 
+Billed monthly (June and July) with 8 classes per month. Payments are completed online through the dashboard. Payment options available: PayPal and Venmo (Stripe coming soon). 
 `;
 
 const sectionOneInfo = `

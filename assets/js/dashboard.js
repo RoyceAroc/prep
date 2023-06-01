@@ -50,11 +50,6 @@ $(window).on('load', function () {
                 setModal("Payment Options",
                 `
                 <div style="text-align:center;">
-                    <h3> Stripe</h5>
-                    <p style='text-align: center;'> <b>Payment status is updated automatically</b> once payment is complete </b></p>
-                    <a href="https://buy.stripe.com/test_dR6dUu6OD9aL8YEbIJ" class="btn" style="background-color: lightblue;margin-top:-12px;">Pay Using Stripe</a>
-                    <p style="color: red;margin-top:5px;">*Note: Stripe charges $85 instead of $80 to account for transaction fees.  </p>
-                    <hr>
                     <h3> Venmo</h5>
                     <p style="text-align: left;"><b>Payment status is updated manually within a day </b>after payment is complete</p> 
                     <a href="https://venmo.com/?txn=pay&audience=friends&recipients=Royce-Arockiasamy&amount=80" target="_blank" class="btn" style="background-color: lightgreen;margin-top:-12px;">Pay Using Venmo</a>
