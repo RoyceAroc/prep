@@ -38,11 +38,11 @@ $(window).on('load', function () {
                     if(paymentCheck == true) {
                         $("#payment").html(`<a class="btn" style="background-color: lightgreen; color:black;">Payment Complete</a>`);
                     } else {
-                        $("#payment").html(`<a id="payment-button" class="btn" style="background-color: tomato; color: white;">Payment Pending</a>`);
+                        $("#payment").html(`<a id="payment-button" class="btn" style="background-color: tomato; color: white;">Payment Link</a>`);
                     }
                 }
             } catch(e) {
-                $("#payment").html(`<a id="payment-button" class="btn" style="background-color: tomato; color: white;">Payment Pending</a>`);
+                $("#payment").html(`<a id="payment-button" class="btn" style="background-color: tomato; color: white;">Payment Link</a>`);
             }
 
             $('#payment-button').click(function(e) {
