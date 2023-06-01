@@ -1,5 +1,5 @@
 var docData;
-var payment;
+var paymentCheck;
 
 $(window).on('load', function () {
     const email = getCookie("Email");
@@ -10,6 +10,7 @@ $(window).on('load', function () {
         const payment = param.get("payment") || null;
         const month = param.get("month") || null;
         if(payment == "complete" && month == "june") {
+            paymentCheck = true;
             db.collection("students").doc(email).set({
                 payment: "june-complete"
             }, { merge: true })
@@ -31,10 +32,14 @@ $(window).on('load', function () {
         }).then(() => {
             try {
                 let a = docData.payment;
-                if(a == "june-complete") {
+                if(a == "june-complete" || paymentCheck == true) {
                     $("#payment").html(`<a class="btn" style="background-color: lightgreen; color:black;">Payment Complete</a>`);
                 } else {
-                    $("#payment").html(`<a id="payment-button" class="btn" style="background-color: tomato; color: white;">Payment Pending</a>`);
+                    if(paymentCheck == true) {
+                        $("#payment").html(`<a class="btn" style="background-color: lightgreen; color:black;">Payment Complete</a>`);
+                    } else {
+                        $("#payment").html(`<a id="payment-button" class="btn" style="background-color: tomato; color: white;">Payment Pending</a>`);
+                    }
                 }
             } catch(e) {
                 $("#payment").html(`<a id="payment-button" class="btn" style="background-color: tomato; color: white;">Payment Pending</a>`);

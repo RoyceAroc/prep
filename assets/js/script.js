@@ -50,7 +50,6 @@ const sectionOneInfo = `
     <b>Term:</b> Summer <br>
     <b>Schedule:</b> Twice a week (Monday and Thursday at 5 PM) <br>
     <b>Registration:</b> Open <br>
-    <b>Class Size:</b> 2/20 <br>
     <b>Cost:</b> $10/class/hr <br>
     <b>Start Date: </b> June 5th, 2023 <br>
     <b>Payments: </b> ${paymentInfo}
@@ -60,7 +59,6 @@ const sectionTwoInfo = `
     <b>Term:</b> Summer <br>
     <b>Schedule:</b> Twice a week (Tuesday and Friday at 5 PM) <br>
     <b>Registration:</b> Open <br>
-    <b>Class Size:</b> 4/20 <br>
     <b>Cost:</b> $10/class/hr <br>
     <b>Start Date: </b> June 6th, 2023 <br>
     <b>Payments: </b> ${paymentInfo}
@@ -70,7 +68,6 @@ const sectionThreeInfo = `
     <b>Term:</b> Summer <br>
     <b>Schedule:</b> Twice a week (Saturday and Sunday at 5 PM) <br>
     <b>Registration:</b> Closed <br>
-    <b>Class Size:</b> 20/20 <br>
     <b>Cost:</b> $10/class/hr <br>
     <b>Start Date: </b> June 3rd, 2023 <br>
     <b>Payments: </b> ${paymentInfo}
@@ -123,7 +120,14 @@ function loginGoogleAuth() {
                 setCookie("Email", user.email, 365);
                 window.location.href = "dashboard.html";
             } else {
-                setModal("Error: New Student", "Please register for a class prior to logging into the dashboard")
+                if(document.getElementById("learn-more") != null) {
+                    $('html, body').animate({
+                        scrollTop: $("#learn-more").offset().top
+                    }, 2000);
+                    setModal("Error: New Student", "Please register for a class prior to logging into the dashboard");
+                } else {
+                    window.location.href = "https://www.zebraprep.com#learn-more";
+                }
             }
         }).catch((error) => {});
     }).catch(function(error) {});  
@@ -142,7 +146,14 @@ function login() {
                     setCookie("Email", email, 365);
                     window.location.href = "dashboard.html";
                 } else {
-                    setModal("Error: New Student", "Please register for a class prior to logging into the dashboard")
+                    if(document.getElementById("learn-more") != null) {
+                        $('html, body').animate({
+                            scrollTop: $("#learn-more").offset().top
+                        }, 2000);
+                        setModal("Error: New Student", "Please register for a class prior to logging into the dashboard");
+                    } else {
+                        window.location.href = "https://www.zebraprep.com#learn-more";
+                    }
                 }
             }).catch((error) => {});
         })
