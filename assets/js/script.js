@@ -48,30 +48,14 @@ Billed monthly (June and July) with 8 classes per month. Payments are completed 
 
 const sectionOneInfo = `
     <b>Term:</b> Summer <br>
-    <b>Schedule:</b> Twice a week (Monday and Thursday at 5 PM) <br>
+    <b>Schedule:</b> Twice a week (Monday/Tuesday and Thursday/Friday at 5 PM). <br>
     <b>Registration:</b> Open <br>
     <b>Cost:</b> $10/class/hr <br>
     <b>Start Date: </b> June 5th, 2023 <br>
+    <b>Structure: </b> First class on Monday and Tuesday at 5 PM (covers the same content and student can attend either one). Second class on Thursday and Friday at 5 PM (covers the same content and student can attend either one).<br>
     <b>Payments: </b> ${paymentInfo}
 `;
 
-const sectionTwoInfo = `
-    <b>Term:</b> Summer <br>
-    <b>Schedule:</b> Twice a week (Tuesday and Friday at 5 PM) <br>
-    <b>Registration:</b> Open <br>
-    <b>Cost:</b> $10/class/hr <br>
-    <b>Start Date: </b> June 6th, 2023 <br>
-    <b>Payments: </b> ${paymentInfo}
-`;
-
-const sectionThreeInfo = `
-    <b>Term:</b> Summer <br>
-    <b>Schedule:</b> Twice a week (Saturday and Sunday at 5 PM) <br>
-    <b>Registration:</b> Closed <br>
-    <b>Cost:</b> $10/class/hr <br>
-    <b>Start Date: </b> June 3rd, 2023 <br>
-    <b>Payments: </b> ${paymentInfo}
-`;
 
 function setModal(title, body) {
     $('#modal-title').text(title);

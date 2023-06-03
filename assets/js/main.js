@@ -29,25 +29,11 @@ $(window).on('load', function () {
         setModal("SAT Math (Section 1)", sectionOneInfo);
     });
 
-    $('#section-2-info').click(function(e) {
-        e.preventDefault(); 
-        setModal("SAT Math (Section 2)", sectionTwoInfo);
-    });
-
-    $('#section-3-info').click(function(e) {
-        e.preventDefault(); 
-        setModal("SAT Math (Section 3)", sectionThreeInfo);
-    });
-
     $('#section-1-registration').click(function(e) {
         e.preventDefault(); 
         register(1);
     });
 
-    $('#section-2-registration').click(function(e) {
-        e.preventDefault(); 
-        register(2);
-    });
 });
 
 function register(section) {
