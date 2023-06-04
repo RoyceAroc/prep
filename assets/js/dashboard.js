@@ -61,11 +61,6 @@ $(window).on('load', function () {
                 `);
             });
         }).catch((error) => {});
-
-        $('#class-page').click(function(e) {
-            e.preventDefault(); 
-            setModal("Class Page", "Link to the Class Dashboard, Calendar, and Meeting Link will open up the day prior to class start.");
-        });
     }
 
     $('#navbar-login').click(function(e) {
