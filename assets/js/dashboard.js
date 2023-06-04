@@ -64,7 +64,7 @@ $(window).on('load', function () {
 
         $('#class-page').click(function(e) {
             e.preventDefault(); 
-            setModal("Class Page", "Link to the Class Dashboard, Calendar, and Meeting Link will open up two days prior to class start.");
+            setModal("Class Page", "Link to the Class Dashboard, Calendar, and Meeting Link will open up the day prior to class start.");
         });
     }
 
