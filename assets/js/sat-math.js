@@ -10,13 +10,17 @@ $(window).on('load', function () {
             } else {
                 const map = new Map(Object.entries(docData.feedback));
                 let feedback = "";
+                let hw = "";
                 for (const [key, value] of map.entries()) {
                     feedback += `
                     <b>Homework ${key}</b>: ${value} <br><br>
                     `;
-                    console.log(key, value);
+                    hw += `
+                    <a href="assets/hw-packets/keys/HW Packet ${key} Key.pdf"> Homework Packet ${key} KEY </a><br>
+                    `;
                 }
                 $("#homework_feedback").html(feedback);
+                $("#hw_answer_keys").html(hw);
             }
         }).catch((error) => {});
     }
@@ -26,5 +30,4 @@ $(window).on('load', function () {
         eraseCookie("Email");
         window.location.href = "/";
     });
-
 });
