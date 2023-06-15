@@ -3,6 +3,7 @@ $(window).on('load', function () {
     if(email == undefined) {
         window.location.href = "/?error=login";
     } else {
+        /*
         db.collection("feedback").doc(email).get().then((doc) => {
             docData = doc.data();
             if(docData == undefined) {
@@ -23,6 +24,7 @@ $(window).on('load', function () {
                 $("#hw_answer_keys").html(hw);
             }
         }).catch((error) => {});
+        */
     }
 
     $('#navbar-login').click(function(e) {
